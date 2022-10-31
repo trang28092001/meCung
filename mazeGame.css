@@ -1,0 +1,230 @@
+html,
+body{
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    padding: 0;
+    margin: 0;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    overflow: auto;
+}
+#mazeContainer{
+    transition-property: opacity;
+    transition-duration: 1s;
+    transition-timing-function: linear;
+    top: 75px;
+    opacity: 0;
+    display: inline-block;
+    background-color: rgba(26, 26, 26, 0.3);
+    margin: auto;
+}
+#mazeContainer #mazeCanvas{
+    margin: 0;
+    display: block;
+    border: solid 1px black;
+}
+input{
+    transition-property: background-color opactity;
+    transition-duration: 0.2s;
+    transition-timing-function: ease-in-out;
+    cursor: pointer;
+    height: 45px;
+    width: 150px;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    display: inline-block;
+    font-size: 15px;
+    text-align: center;
+    text-decoration: none;
+    appearance: none;
+    background: black;
+}
+select{
+    transition-property: background-color opactity;
+    transition-duration: 0.2s;
+    transition-timing-function: ease-in-out;
+    cursor: pointer;
+    background-color:rgba(0, 0, 0, 0.3);
+    height: 45px;
+    width: 150px;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    display: inline-block;
+    font-size: 15px;
+    text-align: center;
+    text-decoration: none;
+    appearance: none;
+    
+}
+input:hover, select:hover{
+    background-color: rgba(57, 51, 51, 0.7);
+}
+input:active{
+    background-color: rgb(118, 106, 106);
+}
+input:focus, select :focus{
+    outline: none;
+}
+
+.custom-select{
+    display: inline-block;
+}
+#Message-Container{
+    visibility: hidden;
+    color: white;
+    display: block;
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.3);
+    z-index: 1;
+}
+#message{
+    width: 30%;
+    height: 60%;
+    position: fixed;
+    top: 40%;
+    bottom: 20%;
+    right: 40%;
+    left: 40%;
+    margin-left: -150px;
+    margin-top: -150px;
+    background: #37393aa5;
+
+}
+#page{
+    font-family: "Segoe UI", Arial, sans-serif;
+    text-align: center;
+    height: auto;
+    width: auto;
+    margin: auto;
+}
+#menu{
+    margin: auto;
+    padding: 10px;
+    height: 65px;
+    box-sizing: border-box;
+}
+#menu h1 {
+    margin: 0;
+    margin-bottom: 100px;
+    font-weight: 600;
+    font-size: 3.2rem;
+}
+ #view{
+    position: absolute;
+    top: 15px;
+    bottom: 0;
+    left: 500px;
+    right: 0;
+    width: 60%;
+    height: 60%;
+}
+.border{
+    border: 1px black solid;
+    border-radius: 5px;
+}
+#startMazeBtn{
+    position: absolute;
+    top: 400px;
+    left: 150px;
+    width: 230px;
+}
+.custom-select{
+    position: absolute;
+    top: 160px;
+    left: 150px;
+}
+.wallPath{
+    position: absolute;
+    top: 240px;
+    left: 125px;
+}
+.img{
+    position: absolute;
+    top: 320px;
+    left: 165px;
+}
+#gradient{
+    z-index: -1;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    width: 100vw;
+    height: 100vh;
+    color: #fff;
+    background: linear-gradient(-50deg, #EE7752, #23A6D5, #23D5AB);
+    background-size: 400% 400%;
+    animation: Grandient 15s ease infinite;
+}
+
+#timer{
+    font-size: 20px;
+    margin-top: 50px; 
+    margin-left: 900px;;
+    display: block;
+}
+#message p{
+    padding-left: 130px;
+    
+}
+#message h1{
+    padding-left: 80px;
+    color: #bc2929;
+}
+#okBtn{
+    margin-left: 120px;
+}
+
+@keyframes Grandient{
+    0%{
+        background-position: 0% 50%;
+    }
+    50%{
+        background-position: 100% 50%;
+    }
+    100%{
+        background-position: 0% 50%;
+    }
+}
+@media only screen and (min-width: 800px) {
+    #view {
+      position: absolute;
+      top:100px;
+      bottom: 0;
+      left: 500px;
+      right: 0;
+      height: 80%;
+      width: 80%;
+    }
+    #mazeCanvas{
+      width: 100%;
+      height: 100%;
+    }
+}
+@media only screen and (min-width: 600px) {
+    #view {
+      position: absolute;
+      top: 90px;
+      bottom: 0;
+      left: 450px;
+      right: 0;
+      height: 50%;
+      width: 50%;
+    }
+    #mazeCanvas{
+      width: 100%;
+      height: 100%;
+    }
+}
